@@ -2,7 +2,7 @@ pipeline {
     agent any
     stages {
 
-        stage('SCM') {
+        stage('Checkout Codebase') {
             steps {
             checkout scm: [$class: 'GitSCM',
             userRemoteConfigs: [[credentialsId: 'github-ssh-key',url: 'git@github.com:mnorm88/multithreading-example-1.git']]]
